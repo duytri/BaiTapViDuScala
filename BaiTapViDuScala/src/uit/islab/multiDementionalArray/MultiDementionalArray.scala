@@ -25,6 +25,8 @@ object MultiDementionalArray {
       arrTmp += "55555"
       array2.update(i, arrTmp.toArray)
     }
+    
+    //var array3 = array2(0).map { x => x.toUpperCase() }
 
     for (i <- 0 to (array2.length - 1)) {
       for (j <- 0 to (array2(i).length - 1)) {
@@ -32,5 +34,7 @@ object MultiDementionalArray {
       }
       println()
     }
+    
+    //array3.map { x => println(x) }
   }
 }
