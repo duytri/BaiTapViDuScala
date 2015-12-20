@@ -10,6 +10,7 @@ import uit.islab.factorial.AddFact2Int
 import uit.islab.fibonacci2.FiboMain2
 import uit.islab.fibonacci.FiboMain
 import uit.islab.multiDementionalArray.MultiDementionalArray
+import uit.islab.fileRW.RWTextFile
 
 object ProgramMenu extends App {
   println("Chon chuc nang ma ban muon su dung:")
@@ -23,6 +24,7 @@ object ProgramMenu extends App {
   println("8. Tim so thu n cua day Fibonacci.")
   println("9. In ra day Fibonacci co do dai n.")
   println("10. Chuong trinh thao tac voi mang 2 chieu.")
+  println("11. Chuong trinh thao tac voi file.")
 
   print("*** Lua chon: ")
   val i = readInt()
@@ -38,5 +40,6 @@ object ProgramMenu extends App {
     case 8 => FiboMain.run()
     case 9 => FiboMain2.run()
     case 10 => MultiDementionalArray.run()
+    case 11 => RWTextFile.run() 
   }
 }
