@@ -11,7 +11,8 @@ object NormalizeStringArray {
     var arrText = new ArrayBuffer[String]
     Source.fromFile(filePath, "utf-8").getLines().foreach { x => arrText.append(x) }
     val testArray = ArrayBuffer("à", "thấy", "số", "rồi")
-    testArray --= arrText
+    testArray ++= arrText
+    testArray ++= arrText
     testArray.foreach { println }
   }
 }
