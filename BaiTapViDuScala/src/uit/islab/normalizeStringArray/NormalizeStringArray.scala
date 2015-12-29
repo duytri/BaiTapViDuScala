@@ -11,8 +11,19 @@ object NormalizeStringArray {
     var arrText = new ArrayBuffer[String]
     Source.fromFile(filePath, "utf-8").getLines().foreach { x => arrText.append(x) }
     val testArray = ArrayBuffer("à", "thấy", "số", "rồi")
-    testArray ++= arrText
-    testArray ++= arrText
+    val testArray2 = ArrayBuffer("z", "thấy", "c", "d")
+    testArray ++= testArray
+    addOrIgnore(testArray, testArray2)
     testArray.foreach { println }
+  }
+  
+  def addOrIgnore(eachWordSet: ArrayBuffer[String], someWords: ArrayBuffer[String]): Unit = {
+    someWords.foreach { x =>
+      {
+        if (!eachWordSet.contains(x)) {
+          eachWordSet.append(x)
+        }
+      }
+    }
   }
 }
