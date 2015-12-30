@@ -12,6 +12,7 @@ import uit.islab.fibonacci.FiboMain
 import uit.islab.multiDementionalArray.MultiDementionalArray
 import uit.islab.fileRW.RWTextFile
 import uit.islab.normalizeStringArray.NormalizeStringArray
+import uit.islab.testList.TestList
 
 object ProgramMenu extends App {
   println("Chon chuc nang ma ban muon su dung:")
@@ -27,6 +28,7 @@ object ProgramMenu extends App {
   println("10. Chuong trinh thao tac voi mang 2 chieu.")
   println("11. Chuong trinh thao tac voi file.")
   println("12. Chuong trinh xoa phan tu trong mang neu trung voi cac phan tu cua mang khac.")
+  println("13. Chuong trinh bieu dien cac ham trong kieu DANH SACH.")
 
   print("*** Lua chon: ")
   val i = readInt()
@@ -44,5 +46,6 @@ object ProgramMenu extends App {
     case 10 => MultiDementionalArray.run()
     case 11 => RWTextFile.run() 
     case 12 => NormalizeStringArray.run() 
+    case 13 => TestList.run() 
   }
 }
