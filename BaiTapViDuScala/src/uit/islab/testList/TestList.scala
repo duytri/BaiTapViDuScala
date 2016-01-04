@@ -18,5 +18,11 @@ object TestList {
 
     val nums2 = List(1, 2, 3, 4, 5)
     (0 /: nums2) { _ + _ }
+    
+    var attrWords = Map[String, (Int, Double)]()
+    attrWords += "a" -> (1 -> 2.0d)
+    attrWords += "b" -> (2 -> 3.1d)
+    attrWords += "c" -> (3 -> 4.2d)
+    attrWords.toSeq.sortWith(_._2._1 > _._2._1).foreach(println)
   }
 }

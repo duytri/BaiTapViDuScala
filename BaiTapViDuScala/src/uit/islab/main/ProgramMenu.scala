@@ -13,6 +13,7 @@ import uit.islab.multiDementionalArray.MultiDementionalArray
 import uit.islab.fileRW.RWTextFile
 import uit.islab.normalizeStringArray.NormalizeStringArray
 import uit.islab.testList.TestList
+import uit.islab.xmlProcessing.XMLProcessing
 
 object ProgramMenu extends App {
   println("Chon chuc nang ma ban muon su dung:")
@@ -29,6 +30,7 @@ object ProgramMenu extends App {
   println("11. Chuong trinh thao tac voi file.")
   println("12. Chuong trinh xoa phan tu trong mang neu trung voi cac phan tu cua mang khac.")
   println("13. Chuong trinh bieu dien cac ham trong kieu DANH SACH.")
+  println("14. Chuong trinh xu ly file XML.")
 
   print("*** Lua chon: ")
   val i = readInt()
@@ -47,5 +49,6 @@ object ProgramMenu extends App {
     case 11 => RWTextFile.run() 
     case 12 => NormalizeStringArray.run() 
     case 13 => TestList.run() 
+    case 14 => XMLProcessing.run()
   }
 }
