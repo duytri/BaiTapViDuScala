@@ -16,7 +16,7 @@ object TestList {
     }
     println(sum)
 
-    val nums2 = List(1, 2, 3, 4, 5)
+    val nums2 = List(2, 7, 4, 3, 9)
     (0 /: nums2) { _ + _ }
     
     var attrWords = Map[String, (Int, Double)]()
@@ -24,5 +24,8 @@ object TestList {
     attrWords += "b" -> (2 -> 3.1d)
     attrWords += "c" -> (3 -> 4.2d)
     attrWords.toSeq.sortWith(_._2._1 > _._2._1).foreach(println)
+    
+    val a = (nums ++: (nums2))
+    a.foreach { println }
   }
 }
