@@ -15,6 +15,7 @@ object Fibo21 {
 
   def run(n: Int): Unit = {
     println("Day Fibonacci ket qua la: ")
-    println(fib_acc(n).filter { x => !(x.isNaN) }.map { x => print(x + "\t") })
+    //println(fib_acc(n).filter { x => !(x.isNaN) }.map { x => print(x + "\t") })
+    println(fib_acc(n).map { x => print(x + "\t") })
   }
 }
