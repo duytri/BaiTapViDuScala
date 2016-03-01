@@ -14,6 +14,7 @@ import main.scala.fileRW.RWTextFile
 import main.scala.normalizeStringArray.NormalizeStringArray
 import main.scala.testList.TestList
 import main.scala.xmlProcessing.XMLProcessing
+import main.scala.checkDigit.CheckDigit
 
 object ProgramMenu extends App {
   println("Chon chuc nang ma ban muon su dung:")
@@ -31,6 +32,7 @@ object ProgramMenu extends App {
   println("12. Chuong trinh xoa phan tu trong mang neu trung voi cac phan tu cua mang khac.")
   println("13. Chuong trinh bieu dien cac ham trong kieu DANH SACH.")
   println("14. Chuong trinh xu ly file XML.")
+  println("15. Chuong trinh kiem tra mot CHUOI nhap tu ban phim co phai la SO.")
 
   print("*** Lua chon: ")
   val i = readInt()
@@ -50,5 +52,6 @@ object ProgramMenu extends App {
     case 12 => NormalizeStringArray.run() 
     case 13 => TestList.run() 
     case 14 => XMLProcessing.run()
+    case 15 => CheckDigit.run()
   }
 }

@@ -9,7 +9,7 @@ object RWTextFile {
     println("~~~ Chuong trinh thao tac tren file TXT ~~~")
     val filePath = "./libs/vnstopword.txt"
     var arrText = new ArrayBuffer[String]
-    Source.fromFile(filePath, "utf-8").getLines().foreach { x => arrText.append(x) }
+    Source.fromFile(filePath).getLines().foreach { x => arrText.append(x) }
     arrText.foreach { println }
   }
 }
